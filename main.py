@@ -50,7 +50,7 @@ def download(videoUrl):
 
   d = Headers()
   d.add('Content-Type', "video/mp4")
-  d.add('Content-Disposition', 'attachment', filename='test.mp4')
+  d.add('Content-Disposition', 'attachment', filename='video.mp4')
   return Response(stream_with_context(generateChunks(videoUrl)),mimetype="video/mp4",headers=d)
 
 
