@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
+  <title>RBG Live Downloader</title>
+</head>
+<body>
+  <h1>RBG-Live Video Downloader</h1>
+  <div class="centered">
+    <form method="POST">
+      <input name="url" type="text" placeholder="Enter URL">
+      <input type="submit" value="Download">
+    </form>
+  </div>
+  <p>This is a website to conveniently download lectures and videos from the <a href="live.rbg.tum.de">TUM-RBG-Live</a>
+  site.</p>
+</body>
+</html>
