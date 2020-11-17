@@ -29,7 +29,7 @@ def download(videoUrl):
 
   def generateChunks(siteUrl):
 
-    siteHTML = requests.get(siteUrl, verify=False).content
+    siteHTML = requests.get(siteUrl).content
     soup = BeautifulSoup(siteHTML, 'html.parser')
 
     playlistUrl = ""
