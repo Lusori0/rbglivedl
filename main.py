@@ -29,7 +29,7 @@ def download(videoUrl):
 
   def generateChunks(siteUrl):
 
-    siteHTML = requests.get(siteUrl).content
+    siteHTML = requests.get(siteUrl, verify=False).content
     soup = BeautifulSoup(siteHTML, 'html.parser')
 
     playlistUrl = ""
@@ -51,7 +51,7 @@ def download(videoUrl):
   d = Headers()
   d.add('Content-Type', "video/mp4")
   d.add('Content-Disposition', 'attachment', filename='video.mp4')
-  return Response(stream_with_context(generateChunks(videoUrl)),mimetype="video/mp4",headers=d)
+  return Response(stream_with_context(generateChunks(videoUrl)), mimetype="video/mp4", headers = d)
 
 
 if __name__ == "__main__":
